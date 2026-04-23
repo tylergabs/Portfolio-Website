@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+* { box-sizing: border-box; }
+
+body { background-color: #e3dbbd;
+       color: #1f2126; 
+	   font-family: "EB Garamond", serif; }
+    
+#wrapper { background-image: linear-gradient(to bottom, #afcc93, #267254);
+           position: relative;
+		   overflow: hidden; }
+		      
+#left-text { font-size: 20px;
+		     font-family: "Oswald", sans-serif;
+			 text-align: right;
+			 line-height: 0%;
+			 margin-right: .5em;
+			 padding-top: .5em;
+			 letter-spacing: 4px; }
+
+#right-text { font-size: 60px;
+			  font-family: "EB Garamond", serif;
+			  letter-spacing: 5px;
+			  margin: 0%; }
+
+.full-header { color: #FFFFFF;
+		       text-shadow: 0px 0px 5px #1f2126;
+			   display: flex;
+			   flex-wrap: wrap;
+			   justify-content: center;
+			   padding-top: 1em;
+			   padding-bottom: 1em; }
+		  
+nav { font-size: 1.8em;
+	  line-height: 2.5; }
+
+nav ul { list-style-type: none;
+		 text-align: right;
+	     font-family: "Oswald", sans-serif;
+		 font-weight: 350;
+		 letter-spacing: 4px;
+		 text-shadow: 0px 0px 5px #1f2126;
+		 padding-left: 1em; }
+
+/*Pop-out menu*/
+nav ul ul {  
+	        background-color: #afcc93;
+			padding-top: 0em;
+			padding-right: 2.9em;
+		    padding-left: 0em; }
+
+/*Pop-out menu list elements*/
+nav ul ul li { display: block;
+			   width: 7em;
+			   font-size: 0.65em;
+			   text-align: left;
+			   line-height: 2; }
+
+nav a { text-decoration: none;
+	    transition: color 1s ease-out; }
+		
+nav a:link    { color: #FFFFFF; }
+nav a:visited { color: #FFFFFF; }
+nav a:hover   { color: #665943; }
+
+/*Education button*/
+nav ul li { color: #FFFFFF; }
+
+main  { background-color: #FFFFFF;
+		padding: 10px 20px 0px 50px; }
+
+/*Collapsible menu list elements*/
+details ul { color: #1f2126; 
+     	     font-family: "EB Garamond", serif;
+	 	     font-size: 1.5em;
+			 margin-top: 0;
+			 line-height: 150%; }
+
+/*Collapsible menu header*/
+summary { color: #1f2126; 
+          font-family: "Oswald", sans-serif;
+		  text-shadow: 0px 0px 2px #1f2126;
+		  font-weight: 350;
+		  letter-spacing: 8px;
+		  font-size: 2.5em; }
+
+/*Summary" header underneath summary titles*/
+#summarycurrent { font-size: .5em;
+                  letter-spacing: normal; }
+
+h1 { color: #FFFFFF;
+     font-family: "EB Garamond", serif;
+	 text-align: center;
+	 letter-spacing: 5px;
+	 font-size: 60px;
+	 margin: 1%;
+	 text-shadow: 0px 0px 5px #1f2126 }
+
+
+h2 { color: #1f2126; 
+     font-family: "Oswald", sans-serif;
+	 text-shadow: 0px 0px 2px #1f2126;
+	 font-weight: 350;
+	 letter-spacing: 8px;
+	 margin-bottom: 1%;
+	 font-size: 2.5em;
+	 grid-column: 1 / -1; }
+
+h3    { color: #1f2126;
+        font-family: "EB Garamond", serif;
+		font-size: 1.45em;
+		font-weight: 350;
+	    grid-column: 1 / -1; }
+
+footer { background-color: #FFFFFF;
+		 font-size: 120%;
+		 text-align: center;
+		 padding: 2em;
+		 font-family: "EB Garamond", serif; }
+
+/*Controls look and positioning of decorative green boxes*/
+.floating-box { position: absolute;
+    		    background-color: #267257;
+				opacity: .2;
+    			pointer-events: none; }
+
+.box1 { width: 300px;
+    	height: 500px; }
+.box2 { width: 300px;
+    	height: 250px; }
+.box3 { width: 300px;
+    	height: 400px; }
+
+/*Controls look and feel of name and quote in profile*/
+.profile-content { font-size: 180%;
+    			   line-height: 1.5;
+   				   text-align: right;
+				   margin-bottom: 0em; }
+
+/*Controls look and feel of profile picture*/
+.profile-pic { max-width: 80%;
+			   padding: 2em;
+			   justify-self: center; }
+
+/*Controls look and feel of small social media icons*/
+.profile-links { width: 8%;
+                 height: 8%;
+				 gap: .2em;
+				 display: flex;
+				 justify-self: right; }
+
+/*Specifies h2 style elements for the profile header*/
+#profile-title { font-size: 1.5em;
+				 text-align: right;
+				 letter-spacing: 8px; }
+
+figure { transition: all ease-out 1s; }
+
+figure:hover { z-index: 999;
+			   transform: scale(1.5); }
+
+form { display: flex;
+       flex-flow: column; }
+
+input, textarea { margin-bottom: .5em; }
+
+/*Specifies look and feel of small project images on small displays*/
+.smallprojects img { width: 20em;
+                     justify-content: center;
+					 border: solid #1f2126; }
+			
+#projectsheader { display: none; }
+
+/*Specifies size and position for final project images on small displays*/
+.finalprojectpictures img { height: 16em;
+	                        width: auto;
+						    border: solid #1f2126; }
+
+/*Disables decorative green boxes, and profile picture on small displays*/
+@media(min-width: 400px) 
+	{ .floating-box { display: none; }
+	  .profile-pic { display: none; }
+	  nav ul ul li { padding-left: 15%; } }
+	  nav ul ul { position: static; }
+	  .profile-links { padding-right: 3.8em; }
+
+@media (min-width: 850px) 
+	{ nav ul { display: flex;
+			   justify-content: center;
+			   font-size: 90%;
+			   gap: .8em;
+			   line-height: normal; } 
+
+	  nav li { position: relative; }
+
+	  nav ul ul { position: absolute;
+				  display: none; }
+
+	  nav li:hover ul { display: block; }
+	  details { height: 250px; }
+
+	  /* Specifies h2 style elements for the projects page*/
+	  #projectsheader { font-size: .6em;
+					    display: flex;
+					    text-align: center;
+					    gap: 7em;
+					    padding-left: 3em; }
+	
+	  /*Changes display to flex for top 3 projects*/
+	  .finalprojectpictures { display: flex;
+							  z-index: 1; }
+
+	  /*Specifies final project images size on large displays*/
+	  .finalprojectpictures img { width: auto;
+							      height: 16em; }
+ 
+	  /*Fine tunes top 3 project images*/
+	  .projectimages { height: 15em;
+					   margin-left: .8em; }
+
+	  .smallprojects figure:hover { z-index: 999;
+                                    transform: scale(2); }
+
+	  /*Centers .smallprojects container*/
+	  .smallprojects { z-index: 1; 
+					   justify-self: center; }
+
+	  /*Fine tunes look to small projects images*/
+	  .smallprojects img { height: 10em;
+		                   width: auto;
+						   border: solid #1f2126;
+						   margin-left: 19em; }
+
+	  /*Specifies look and feel of small projects header*/
+	  .smallprojects h2 { font-size: 1.8em;
+						  text-align: center;
+						  margin-right: 1.4em; }
+
+	  /*Specifies look and feel of small projects text*/
+	  .smallprojects h3 { text-align: center;
+						  margin-right: 2em;
+						  margin-left: 2em; }
+
+	  main { display: grid;
+			 grid-template-columns: 1fr 1fr;
+  			 grid-template-areas: "profile-content profile-pic"; }
+
+	  .floating-box { display: block; }
+	  
+	  .box1 { top: 20%;
+			  left: 10%;
+			  display: block; }
+			
+	  .box2 { top: 40%;
+			  left: 50%;
+			  display: block; }
+	
+	  .box3 { top: 50%;
+			  left: 60%;
+			  display: block; }
+
+	  .profile-pic { display: block; }
+	
+	  form { width: 60%;
+			 display: grid;
+			 gap: 1em;
+			 grid-template-columns: 6em 1fr;
+			 color: #1f2126;
+			 font-size: 160%; }
+
+	  textarea { resize: vertical;
+			     width: 200%;
+				 font-size: 100%;
+				 height: 100%; }
+
+	  input[type="text"] { font-size: 80%; }
+	  input[type="email"] { font-size: 80%; }
+	  input[type="tel"] { font-size: 80%; }
+	  
+	  input[type="submit"] { grid-column: 2 / 3;
+                             width: 10em;
+					    	 height: 3em;
+							 margin-top: 2em;
+							 font-family: "Oswald", sans-serif;
+							 font-size: 65%;
+							 font-weight: 400;
+							 letter-spacing: 6px; } }
+
+@media (min-width: 1280px) 
+	{ #wrapper { margin: auto;
+			     width: 80%;
+				 border: 1px solid #665943;
+				 box-shadow: 3px 3px 3px #665943; }
+			
+	  .box1 { display: block;
+			  top: 15%;
+    		  left: 30%; }
+
+	  .box2 { display: block;
+			  top: 40%;
+			  left: 60%; }
+
+	  .box3 { display: block;
+			  top: 50%;
+			  left: 70%; }
+			
+	  nav { padding-right: .5em; }
+
+	  nav ul ul { position: static;
+	              background-color: transparent; }
+
+	  @supports (display: grid) 
+	  	{ nav ul { flex-direction: column;
+				   padding-top: 1em; }
+
+
+		  header { grid-area: header; }
+		  .profile-content { grid-area: profile-content; }
+		  .profile-pic { grid-area: profile-pic; }
+		  nav    { grid-area: nav; }
+		  main   { grid-area: main; }
+		  footer { grid-area: footer; }
+				  
+		  #wrapper { display: grid;
+				     grid-template:
+					 "header	header 				header"
+					 "nav    	profile-content		profile-pic"
+					 "nav    	main				main"
+					 "nav    	footer				footer"
+						/ 200px 1fr 1fr; } } }
