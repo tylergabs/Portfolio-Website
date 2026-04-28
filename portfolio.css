@@ -111,7 +111,8 @@ h3    { color: #1f2126;
         font-family: "EB Garamond", serif;
 		font-size: 1.45em;
 		font-weight: 350;
-	    grid-column: 1 / -1; }
+	    grid-column: 1 / -1;
+	    padding-right: 1em; }
 
 footer { background-color: #FFFFFF;
 		 font-size: 120%;
@@ -140,7 +141,7 @@ footer { background-color: #FFFFFF;
 
 /*Controls look and feel of profile picture*/
 .profile-pic { max-width: 80%;
-			   padding: 2em;
+			   padding: 1.5em;
 			   justify-self: center; }
 
 /*Controls look and feel of small social media icons*/
@@ -166,7 +167,7 @@ form { display: flex;
 input, textarea { margin-bottom: .5em; }
 
 /*Specifies look and feel of small project images on small displays*/
-.smallprojects img { width: 20em;
+.smallprojects img { width: 10em;
                      justify-content: center;
 					 border: solid #1f2126; }
 			
@@ -189,58 +190,59 @@ input, textarea { margin-bottom: .5em; }
 	{ nav ul { display: flex;
 			   justify-content: center;
 			   font-size: 90%;
-			   gap: .8em;
+			   gap: 1.25em;
 			   line-height: normal; } 
 
 	  nav li { position: relative; }
 
-	  nav ul ul { position: absolute;
-				  display: none; }
+	  nav ul ul { display: block;
+	              background-color: transparent; }
 
-	  nav li:hover ul { display: block; }
 	  details { height: 250px; }
 
 	  /* Specifies h2 style elements for the projects page*/
 	  #projectsheader { font-size: .6em;
 					    display: flex;
 					    text-align: center;
-					    gap: 7em;
-					    padding-left: 3em; }
+					    gap: 7em; }
 	
 	  /*Changes display to flex for top 3 projects*/
 	  .finalprojectpictures { display: flex;
 							  z-index: 1; }
 
 	  /*Specifies final project images size on large displays*/
-	  .finalprojectpictures img { width: auto;
-							      height: 16em; }
+	  .finalprojectpictures img { height: 14em; }
  
 	  /*Fine tunes top 3 project images*/
 	  .projectimages { height: 15em;
-					   margin-left: .8em; }
+	                   display: flex; }
 
 	  .smallprojects figure:hover { z-index: 999;
                                     transform: scale(2); }
 
 	  /*Centers .smallprojects container*/
-	  .smallprojects { z-index: 1; 
-					   justify-self: center; }
+	  .smallprojects { display: grid;
+					   justify-items: center;
+					   z-index: 1; }
 
 	  /*Fine tunes look to small projects images*/
 	  .smallprojects img { height: 10em;
+						   display: flex;
 		                   width: auto;
 						   border: solid #1f2126;
-						   margin-left: 19em; }
+						   margin: auto; }
 
 	  /*Specifies look and feel of small projects header*/
 	  .smallprojects h2 { font-size: 1.8em;
+		 				  display: flex;
 						  text-align: center;
-						  margin-right: 1.4em; }
+						  justify-content: center;
+						  width: auto; }
 
 	  /*Specifies look and feel of small projects text*/
-	  .smallprojects h3 { text-align: center;
-						  margin-right: 2em;
-						  margin-left: 2em; }
+	  .smallprojects h3 { display: flex;
+						  justify-content: center;
+						  text-align: center; }
 
 	  main { display: grid;
 			 grid-template-columns: 1fr 1fr;
@@ -308,7 +310,10 @@ input, textarea { margin-bottom: .5em; }
 	  nav { padding-right: .5em; }
 
 	  nav ul ul { position: static;
-	              background-color: transparent; }
+	              background-color: transparent;
+				  display: none; }
+
+	  nav li:hover ul { display: block; }
 
 	  @supports (display: grid) 
 	  	{ nav ul { flex-direction: column;
