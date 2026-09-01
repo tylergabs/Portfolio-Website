@@ -85,10 +85,6 @@ summary { color: #1f2126;
 		  letter-spacing: 8px;
 		  font-size: 2.5em; }
 
-/*Summary" header underneath summary titles*/
-#summarycurrent { font-size: .5em;
-                  letter-spacing: normal; }
-
 h1 { color: #FFFFFF;
      font-family: "EB Garamond", serif;
 	 text-align: center;
